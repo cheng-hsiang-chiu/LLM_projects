@@ -1,2 +1,3 @@
 * preprocessing.py : Perfoming preprocessing to text 
 * encoding.py : Implementing three text encoding applications
+* text_processing_pipeline.py : Implementing the whole text processing pipeline, including preprocessing, and encoding, and dataloader
