@@ -18,8 +18,14 @@ class TextClassificationCNN(nn.Module):
         conved = conved.mean(dim=2) 
         return self.fc(conved)
 
+vocab_size = 17
+embed_dim = 10
+data = [(['I', 'love', 'this', 'book'], 1), (['This', 'is', 'an', 'amazing', 'novel'], 1), (['I', 'really', 'like', 'this', 'story'], 1), (['I', 'do', 'not', 'like', 'this', 'book'], 0), (['I', 'hate', 'this', 'novel'], 0), (['This', 'is', 'a', 'terrible', 'story'], 0)]
+word_to_ix = {'I': 0, 'love': 1, 'this': 2, 'book': 3, 'This': 4, 'is': 5, 'an': 6, 'amazing': 7, 'novel': 8, 'really': 9, 'like': 10, 'story': 11, 'do': 12, 'not': 13, 'hate': 14, 'a': 15, 'terrible': 16}
+
 
 # Define the loss function
+model = TextClassificationCNN(vocab_size, embed_dim)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.1)
 
