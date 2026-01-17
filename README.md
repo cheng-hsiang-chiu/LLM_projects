@@ -5,3 +5,4 @@
 * Embedding_in_Pytorch.py : Using PyTorch to perform text embedding
 * Sentiment_analysis_using_CNN.py : Implementing a text sentiment analysis using CNN 
 * RNN_LSTM_GRU_text_sentiment.py : Implementing a text sentiment analysis using RNN, or LSTM, or GRU
+* RNN_text_generation.py : Implementing a text generator using RNN
